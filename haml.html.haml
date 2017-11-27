@@ -1,0 +1,49 @@
+%p
+  = succeed '.' do
+    @good = 'Friday dinner'
+  end
+
+!!! 5
+%div
+  This is a dood day fam
+  %p= 2 * 4
+  %p This is it, the fappening
+  %p.good#God Yeush
+%img{ src: 'assets/images/first.png', alt: 'Learning Haml like a boss', class: 'the good old days', data: {author_id: 3 }}
+%input(type="radio" checked="true")
+%p= @good
+%p \@good
+
+%p
+  -# take this out
+  / leave this out
+  The good old days
+  = succeed "." do
+    %a(href="goodies")
+  end
+  /
+    leave them out
+    %p even this dude here
+  /[if lt IE 9]
+    %script(src="shiv.js")
+:javascript
+  var peace = document.querySelector('#God')
+  console.log(peace)
+:css
+  p {
+    margin: 2px;
+    border: 30px;
+  }
+
+/
+  -#:sass
+    p
+     margin: 34px
+     border: 2px
+
+#content
+  .left.column
+    %h2 Welcome to our site!
+    %p= @print_information
+  .right.column
+    = render partial: "sidebar"
